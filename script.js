@@ -50,7 +50,7 @@ function reorder(){
     console.log(newPos);
     // oTop = $(".post").eq(newPos).offset().top;
     $(".post").eq(newPos).after($(this));
-    $(this).remove();
+    // $(this).remove();
     // $(this).css({'position':'absolute'});
     // $(this).animate({'top':oTop},2000, function(){
       // $(this).css({'position':'static'});
