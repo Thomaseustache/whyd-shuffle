@@ -34,12 +34,8 @@ function reorder() {
         grp[i] = grp[x];
         grp[x] = temp;
     }
-    $(grp).slideUp(function(){
-      $(grp).remove();
-    });
-    $(".posts").append($(grp),function(){
-      $(grp).fadeIn();
-    });
+    $(grp).remove();
+    $(".posts").append($(grp));
     console.log('REORDER');
 }
 
