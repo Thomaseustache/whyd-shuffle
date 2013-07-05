@@ -1233,6 +1233,7 @@ function WhydPlayer () {
 			'	<button id="btnPrev" onclick="playem.prev()"></button>',
 			'	<button id="btnPlay" onclick="playem.playPause()"></button>',
 			'	<button id="btnNext" onclick="playem.next()"></button>',
+			'	<button id="btnShuffle" onclick="playem.shuffle()">Shuffle</button>',
 			'</div>',
 		//	'<span id="trackPoster">(none)</span>',
 			'<div class="progressPanel">',
