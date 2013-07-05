@@ -37,7 +37,9 @@ function reorder() {
     $(grp).slideUp(function(){
       $(grp).remove();
     });
-    $(".posts").append($(grp));
+    $(".posts").append($(grp),function(){
+      $(grp).fadeIn();
+    });
     console.log('REORDER');
 }
 
