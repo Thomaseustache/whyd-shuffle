@@ -42,25 +42,22 @@ console.log('on');
 function reorder(){
   var grp = $(".posts").children();
   var cnt = grp.length;
-  $(".post").position
+  $(".post").hide();
   
   grp.each(function(i){
     console.log(i);
     newPos = getRand(cnt, 0);
     console.log(newPos);
     // oTop = $(".post").eq(newPos).offset().top;
-    $(this).fadeOut(1000);
     $(".post").eq(newPos).after($(this));
-    $(this).fadeIn(2000);
-    
-    
+    $(".post").eq(i).delay(i*2000).fadeIn(1000);
     // $(this).remove();
     // $(this).css({'position':'absolute'});
     // $(this).animate({'top':oTop},2000, function(){
       // $(this).css({'position':'static'});
     // });
-    
   });
+  
 }
 
 function orderPosts() {
