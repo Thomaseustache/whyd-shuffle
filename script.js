@@ -49,10 +49,9 @@ function reorder(){
     newPos = getRand(cnt, 0);
     console.log(newPos);
     // oTop = $(".post").eq(newPos).offset().top;
-    $(this).fadeOut(1000,function(){
-      $(".post").eq(newPos).after($(this));
-      $(this).fadeIn(2000);
-    });
+    $(this).fadeOut(1000);
+    $(".post").eq(newPos).after($(this));
+    $(this).fadeIn(2000);
     
     
     // $(this).remove();
