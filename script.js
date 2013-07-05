@@ -42,11 +42,15 @@ console.log('on');
 function reorder(){
   var grp = $(".posts").children();
   var cnt = grp.length;
-  getRand(cnt, 0);
+  $(".post").position
+  
   grp.each(function(i){
     console.log(i);
     newPos = getRand(cnt, 0);
     console.log(newPos);
+    oTop = $(".post").eq(newPos).offset().top;
+    $(this).css({'position':'absolute'});
+    $(this).animate({'top':oTop},2000);
   });
 }
 
