@@ -3,7 +3,15 @@ $('.buttons').append('<button id="shuffle" type="button" value="1">Shuffle</butt
 $('#shuffle').bind('click',shuffle);
 
 function shuffle(){
-    randomNext = Math.floor(Math.random() * trackList.length) + 1;
-    trackList[(currentTrack.index + randomNext) % trackList.length];
-    console.log('on');
+  var $btnLoadMore = $(".btnLoadMore:visible");
+  if ($btnLoadMore.length){
+    console.log('loadmore');
+    console.log(window.nextPageUrl);
+    // window.playem.updateTracks();
+    // $(this).ajaxify();
+  }
+  else{
+    
+  }
+  console.log('on');
 }
