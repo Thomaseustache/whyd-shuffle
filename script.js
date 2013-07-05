@@ -11,7 +11,7 @@ function shuffle(){
     // $(this).ajaxify();
   }
   else{
-    
+    console.log('full');
   }
   console.log('on');
 }
