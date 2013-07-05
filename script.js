@@ -4,13 +4,13 @@ $('#shuffle').bind('click',shuffle);
 
 function shuffle(){
   console.log('Shuffle Function');
-  if($('#shuffle').val()=="1"){
+  if($('#shuffle').hasClass('on')){
     window.playem.next();
     console.log('OFF');
-    $('#shuffle').val()="0";
+    $('#shuffle').removeClass('on');
   }
   else {
     console.log('ON');
-    $('#shuffle').val()="1";
+    $('#shuffle').addClass('on');
   }
 }
