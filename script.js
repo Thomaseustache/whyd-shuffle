@@ -42,7 +42,7 @@ console.log('on');
 function reorder(){
   var grp = $(".posts").children();
   var cnt = grp.length;
-  $(".post").hide();
+  $(".post").fadeOut(300);
   
   grp.each(function(i){
     console.log(i);
@@ -50,13 +50,16 @@ function reorder(){
     console.log(newPos);
     // oTop = $(".post").eq(newPos).offset().top;
     $(".post").eq(newPos).after($(this));
-    $(this).delay(newPos*200).fadeIn(200);
     // $(this).remove();
     // $(this).css({'position':'absolute'});
     // $(this).animate({'top':oTop},2000, function(){
       // $(this).css({'position':'static'});
     // });
   });
+  $(".post").each(function(i){
+    $(this).delay(i*200).fadeIn(200);
+  });
+  
   
 }
 
