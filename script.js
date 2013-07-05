@@ -51,7 +51,7 @@ function reorder(){
     // oTop = $(".post").eq(newPos).offset().top;
     $(this).fadeOut(1000,function(){
       $(".post").eq(newPos).after($(this));
-      $(this).faeIn();
+      $(this).fadeIn(2000);
     });
     
     
