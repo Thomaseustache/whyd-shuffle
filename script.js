@@ -49,8 +49,13 @@ function reorder(){
     newPos = getRand(cnt, 0);
     console.log(newPos);
     oTop = $(".post").eq(newPos).offset().top;
-    $(this).css({'position':'absolute'});
-    $(this).animate({'top':oTop},2000);
+    $(".post").eq(newPos).after($(this));
+    $(this).remove();
+    // $(this).css({'position':'absolute'});
+    // $(this).animate({'top':oTop},2000, function(){
+      // $(this).css({'position':'static'});
+    // });
+    
   });
 }
 
