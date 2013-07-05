@@ -23,23 +23,40 @@ window.playem.updateTracks();
 $frame.ajaxify();
 console.log('on');
 
-function reorder() {
-    var grp = $(".posts").children();
-    var cnt = grp.length;
+// function reorder() {
+    // var grp = $(".posts").children();
+    // var cnt = grp.length;
 
-    var temp, x;
-    for (var i = 0; i < cnt; i++) {
-        temp = grp[i];
-        x = Math.floor(Math.random() * cnt);
-        grp[i] = grp[x];
-        grp[x] = temp;
-    }
-    $(grp).remove();
-    $(".posts").append($(grp));
-    console.log('REORDER');
+    // var temp, x;
+    // for (var i = 0; i < cnt; i++) {
+        // temp = grp[i];
+        // x = Math.floor(Math.random() * cnt);
+        // grp[i] = grp[x];
+        // grp[x] = temp;
+    // }
+    // $(grp).remove();
+    // $(".posts").append($(grp));
+    // console.log('REORDER');
+// }
+
+function reorder(){
+  var grp = $(".posts").children();
+  var cnt = grp.length;
+  getRand(cnt, 0);
+  grp.each(function(i){
+    console.log(i);
+    newPos = getRand(cnt, 0);
+    console.log(newPos);
+  });
 }
 
 function orderPosts() {
     // set original order
     $(".posts").html(orig);
+}
+function getRand(max, min){
+   var rand;
+    rand = Math.floor(Math.random() * (max - min + 1) + min);
+
+  return rand;
 }
