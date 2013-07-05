@@ -48,7 +48,7 @@ function reorder(){
     console.log(i);
     newPos = getRand(cnt, 0);
     console.log(newPos);
-    oTop = $(".post").eq(newPos).offset().top;
+    // oTop = $(".post").eq(newPos).offset().top;
     $(".post").eq(newPos).after($(this));
     $(this).remove();
     // $(this).css({'position':'absolute'});
