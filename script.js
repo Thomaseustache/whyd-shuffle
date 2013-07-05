@@ -4,5 +4,13 @@ $('#shuffle').bind('click',shuffle);
 
 function shuffle(){
   console.log('Shuffle Function');
-  window.playem.next();
+  if($('#shuffle').val()=="1"){
+    window.playem.next();
+    console.log('OFF');
+    $('#shuffle').val()="0";
+  }
+  else {
+    console.log('ON');
+    $('#shuffle').val()="1";
+  }
 }
