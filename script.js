@@ -1148,6 +1148,7 @@ function Playem(playerFunctions) {
 		},
 		next: function() {
 			// playTrack(trackList[(currentTrack.index + 1) % trackList.length]);
+      console.log(trackList.length);
       randomNext = Math.floor(Math.random() * trackList.length) + 1;
 			playTrack(trackList[(currentTrack.index + randomNext) % trackList.length]);
       console.log('next TRACK !');
