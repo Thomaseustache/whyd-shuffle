@@ -55,8 +55,7 @@ function reorder(){
     // $(this).animate({'top':oTop},2000, function(){
       // $(this).css({'position':'static'});
     // });
-  });
-  $(".post").each(function(i){
+  }).each(function(i){
     $(this).delay(i*200).fadeIn(200);
   });
   
