@@ -4,5 +4,5 @@ $('#shuffle').bind('click',shuffle);
 
 function shuffle(){
   console.log('Shuffle Function');
-  window.playem.next;
+  window.playem.next();
 }
