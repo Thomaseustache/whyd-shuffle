@@ -5,7 +5,8 @@ $('#shuffle').bind('click',shuffle);
 function shuffle(){
   console.log('Shuffle Function');
   if($('#shuffle').hasClass('on')){
-    window.playem.next();
+    randomNext = Math.floor(Math.random() * trackList.length) + 1;
+    trackList[(currentTrack.index + randomNext) % trackList.length];
     console.log('OFF');
     $('#shuffle').removeClass('on');
   }
