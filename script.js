@@ -25,7 +25,7 @@ function reorder(){
   var cnt = grp.length;
   $(".post").fadeOut(300);
   if($('.et-randomized-markup').length==0){
-    $(".posts").before('<div class="et-randomized-markup" style="text-align:center; color:#ccc; padding:5px; marginBottom:10px;">Randomized by Thomas Eustache ♫ </div>');
+    $(".posts").before('<div class="et-randomized-markup" style="text-align:center; color:#ccc; padding:5px; marginBottom:10px;">Whyd playlist randomized by Thomas Eustache ♫ </div>');
   }
   grp.each(function(i){
     newPos = getRand(cnt, 0);
