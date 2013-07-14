@@ -25,7 +25,7 @@ $(".posts").ajaxify();
 function reorder(){
   var grp = $(".posts").children('.post');
   var cnt = grp.length;
-  $(".posts").fadeOut(300).before('<div>Randomized by Thomas Eustache ♫ </div>');
+  $(".posts").fadeOut(300).before('<div style="text-align:center; color:#ccc; padding:5px; marginBottom:10px;">Randomized by Thomas Eustache ♫ </div>');
   grp.each(function(i){
     console.log(i);
     newPos = getRand(cnt, 0);
