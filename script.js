@@ -19,7 +19,7 @@ else{
   reorder();
 }
 window.playem.updateTracks();
-$frame.ajaxify()
+$(".posts").ajaxify();
 
 
 function reorder(){
