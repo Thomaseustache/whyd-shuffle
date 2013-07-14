@@ -25,7 +25,10 @@ $(".posts").ajaxify();
 function reorder(){
   var grp = $(".posts").children('.post');
   var cnt = grp.length;
-  $(".posts").fadeOut(300).before('<div style="text-align:center; color:#ccc; padding:5px; marginBottom:10px;">Randomized by Thomas Eustache ♫ </div>');
+  $(".posts").fadeOut(300);
+  if($('.et-randomized-markup').length==0){
+    $(".posts").before('<div class="et-randomized-markup" style="text-align:center; color:#ccc; padding:5px; marginBottom:10px;">Randomized by Thomas Eustache ♫ </div>');
+  }
   grp.each(function(i){
     console.log(i);
     newPos = getRand(cnt, 0);
@@ -37,10 +40,8 @@ function reorder(){
     // $(this).animate({'top':oTop},2000, function(){
       // $(this).css({'position':'static'});
     // });
-  }).each(function(i){
     $(this).delay(i*200).fadeIn(200);
   });
-  
   
 }
 
